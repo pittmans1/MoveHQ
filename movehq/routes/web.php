@@ -17,7 +17,8 @@ use App\Http\Controllers\Controller;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::view('/signup','signup');
+Route::view('/login','login');
 Route::post('/signup', ['App\Http\Controllers\Controller::class', 'createUser']);
 Route::post('login', ['App\Http\Controllers\Controller::class','login']);
 Route::view('/home', 'home');
