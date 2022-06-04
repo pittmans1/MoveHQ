@@ -22,3 +22,6 @@ Route::view('/login','login');
 Route::post('/signup', ['App\Http\Controllers\Controller::class', 'createUser']);
 Route::post('login', ['App\Http\Controllers\Controller::class','login']);
 Route::view('/home', 'home');
+Route::get('/posts',['App\Http\Controllers\Controller::class','getPosts']);
+Route::post('/post/{id}', ['App\Http\Controllers\Controller::class','createPost']);
+Route::delete('/post/{id}', ['App\Http\Controllers\Controller::class','deletePost']);
